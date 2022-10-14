@@ -1,0 +1,269 @@
+Index: src/Facturation.java
+===================================================================
+diff --git a/src/Facturation.java b/src/Facturation.java
+deleted file mode 100644
+--- a/src/Facturation.java	(revision d056d853995717c7851f2f62185697d99b341919)
++++ /dev/null	(revision d056d853995717c7851f2f62185697d99b341919)
+@@ -1,2 +0,0 @@
+-public class Facturation {
+-}
+Index: src/Film.java
+===================================================================
+diff --git a/src/Film.java b/src/Film.java
+deleted file mode 100644
+--- a/src/Film.java	(revision d056d853995717c7851f2f62185697d99b341919)
++++ /dev/null	(revision d056d853995717c7851f2f62185697d99b341919)
+@@ -1,43 +0,0 @@
+-public class Film {
+-
+-    private int prix;
+-    private String titre;
+-    private String categorie;
+-
+-    private Film film;
+-
+-    public Film() {
+-        this.prix = 0;
+-        this.titre = "";
+-        this.categorie = "";
+-    }
+-
+-    public Film(int prix, String titre, String categorie) {
+-        this.prix = prix;
+-        this.titre = titre;
+-        this.categorie = categorie;
+-    }
+-
+-    public int getPrix() {
+-        return prix;
+-    }
+-
+-    public void setPrix(int prix) {
+-        this.prix = prix;
+-    }
+-    public String getTitre() {
+-        return titre;
+-    }
+-
+-    public void setTitre(String titre) {
+-        this.titre = titre;
+-    }
+-
+-    public String getCategorie() {
+-        return categorie;
+-    }
+-
+-    public void setCategorie(String categorie) {
+-        this.categorie = categorie;
+-    }
+-}
+Index: src/Agence.java
+===================================================================
+diff --git a/src/Agence.java b/src/Agence.java
+deleted file mode 100644
+--- a/src/Agence.java	(revision d056d853995717c7851f2f62185697d99b341919)
++++ /dev/null	(revision d056d853995717c7851f2f62185697d99b341919)
+@@ -1,16 +0,0 @@
+-import java.util.ArrayList;
+-
+-public class Agence {
+-
+-
+-
+-        public static void main(String[] args) {
+-            ArrayList<String> cars = new ArrayList<String>();
+-            cars.add("Volvo");
+-            cars.add("BMW");
+-            cars.add("Ford");
+-            cars.add("Mazda");
+-            System.out.println(cars);
+-        }
+-
+-}
+Index: src/Client.java
+===================================================================
+diff --git a/src/Client.java b/src/Client.java
+deleted file mode 100644
+--- a/src/Client.java	(revision d056d853995717c7851f2f62185697d99b341919)
++++ /dev/null	(revision d056d853995717c7851f2f62185697d99b341919)
+@@ -1,23 +0,0 @@
+-public class Client {
+-    private String nom;
+-    private int age;
+-    private String filmNom;
+-    private String filmGenre;
+-
+-    private Agence agence;
+-
+-    public Client(String nom,int age){
+-        this.nom = nom;
+-        this.age = age;
+-
+-    }
+-
+-    public boolean demandeNom(String filmNom){
+-        this.filmNom = filmNom;
+-
+-        return true;
+-    }
+-    public void demandeGenre(String filmGenre){
+-        this.filmGenre = filmGenre;
+-    }
+-}
+Index: src/Statistique.java
+===================================================================
+diff --git a/src/Statistique.java b/src/Statistique.java
+deleted file mode 100644
+--- a/src/Statistique.java	(revision d056d853995717c7851f2f62185697d99b341919)
++++ /dev/null	(revision d056d853995717c7851f2f62185697d99b341919)
+@@ -1,2 +0,0 @@
+-public class Statistique {
+-}
+Index: src/Main.java
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+deleted file mode 100644
+--- a/src/Main.java	(revision d056d853995717c7851f2f62185697d99b341919)
++++ /dev/null	(revision d056d853995717c7851f2f62185697d99b341919)
+@@ -1,12 +0,0 @@
+-
+-public class Main {
+-    public static void main(String[] args) {
+-        Client Ewan = new Client("Ewan",20);
+-        if (Ewan.demandeNom("Star wars"))
+-            System.out.println("Votre film est disponible");
+-        else
+-            System.out.println("Votre film est indisponible");
+-    }
+-
+-
+-}
+Index: src/DVD.java
+===================================================================
+diff --git a/src/DVD.java b/src/DVD.java
+deleted file mode 100644
+--- a/src/DVD.java	(revision d056d853995717c7851f2f62185697d99b341919)
++++ /dev/null	(revision d056d853995717c7851f2f62185697d99b341919)
+@@ -1,23 +0,0 @@
+-public class DVD {
+-
+-
+-    private boolean estDisponible;
+-    private Film film;
+-
+-    public DVD(boolean estDisponible, Film film) {
+-        this.estDisponible = estDisponible;
+-    }
+-
+-    public DVD(){
+-        new DVD(false, new Film());
+-    }
+-
+-    public boolean estDisponible() {
+-        return estDisponible;
+-    }
+-
+-    public void setEstDisponible(boolean estDisponible) {
+-        this.estDisponible = estDisponible;
+-    }
+-
+-}
+Index: src/Location.java
+===================================================================
+diff --git a/src/Location.java b/src/Location.java
+deleted file mode 100644
+--- a/src/Location.java	(revision d056d853995717c7851f2f62185697d99b341919)
++++ /dev/null	(revision d056d853995717c7851f2f62185697d99b341919)
+@@ -1,2 +0,0 @@
+-public class Location {
+-}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7af65967-ec91-46c3-8ae7-c17febb984c4\" name=\"Changes\" comment=\"update class Client et main\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Client.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Client.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2G5NI41alehj46czzVg915liM1u\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7af65967-ec91-46c3-8ae7-c17febb984c4\" name=\"Changes\" comment=\"\" />\r\n      <created>1665674401737</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1665674401737</updated>\r\n      <workItem from=\"1665674857123\" duration=\"301000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"update class Client et main\">\r\n      <created>1665678540435</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1665678540435</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Définition de DVD + getter et setters\" />\r\n    <MESSAGE value=\"update class Client et main\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"update class Client et main\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d056d853995717c7851f2f62185697d99b341919)
++++ b/.idea/workspace.xml	(date 1665754502359)
+@@ -3,19 +3,27 @@
+   <component name="ChangeListManager">
+     <list default="true" id="7af65967-ec91-46c3-8ae7-c17febb984c4" name="Changes" comment="update class Client et main">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Film.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+-  <component name="ProblemsViewState">
+-    <option name="selectedTabId" value="CurrentFile" />
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="2G5NI41alehj46czzVg915liM1u" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+@@ -41,16 +49,32 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1665674401737</updated>
+-      <workItem from="1665674857123" duration="301000" />
++      <workItem from="1665674857123" duration="776000" />
++      <workItem from="1665752927913" duration="105000" />
++      <workItem from="1665754094544" duration="405000" />
+     </task>
+-    <task id="LOCAL-00001" summary="update class Client et main">
+-      <created>1665678540435</created>
++    <task id="LOCAL-00001" summary="rajout src">
++      <created>1665675205158</created>
+       <option name="number" value="00001" />
+       <option name="presentableId" value="LOCAL-00001" />
+       <option name="project" value="LOCAL" />
+-      <updated>1665678540435</updated>
++      <updated>1665675205158</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="Add main Film">
++      <created>1665679011571</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1665679011571</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Add main Film">
++      <created>1665679049349</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1665679049349</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -68,7 +92,8 @@
+     </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Définition de DVD + getter et setters" />
++    <MESSAGE value="rajout src" />
++    <MESSAGE value="Add main Film" />
+     <MESSAGE value="update class Client et main" />
+     <option name="LAST_COMMIT_MESSAGE" value="update class Client et main" />
+   </component>
